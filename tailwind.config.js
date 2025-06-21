@@ -59,7 +59,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-inter)", "Inter", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {

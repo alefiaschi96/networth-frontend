@@ -6,6 +6,7 @@
 
 export const API_CONFIG = {
   BASE_URL: 'http://networth-api-alb-1856144295.eu-south-1.elb.amazonaws.com',
+  // BASE_URL: 'http://localhost:3000',
   ENDPOINTS: {
     AUTH: {
       LOGIN: '/auth/login',
@@ -14,7 +15,7 @@ export const API_CONFIG = {
       REFRESH_TOKEN: '/auth/refresh-token',
     },
     USER: {
-      PROFILE: '/users/me',
+      PROFILE: '/auth/me',
     },
     ACCOUNTS: {
       LIST: '/accounts',

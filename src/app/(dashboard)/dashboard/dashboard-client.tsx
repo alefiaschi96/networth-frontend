@@ -215,19 +215,18 @@ export default function DashboardClient() {
         <div className="bg-white dark:bg-neutral-900 rounded-xl p-6 shadow-sm border border-neutral-200 dark:border-neutral-800">
           <div className="mb-4">
             <h2 className="text-xl font-bold">Performance Finanziaria Complessiva</h2>
-            <div className="flex items-baseline gap-2">
+            <div className="flex items-baseline gap-2 mt-3">
               <span className="text-2xl font-bold">{formatCurrency(netWorthData.investmentsValue)}</span>
               <span className={`text-sm font-medium ${netWorthData.totalReturnPercentage >= 0 ? 'text-green-500' : 'text-red-500'}`}>
                 {netWorthData.totalReturnPercentage >= 0 ? '+' : ''}
                 {formatPercentage(netWorthData.totalReturnPercentage)}
               </span>
             </div>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">Valore Investimenti</p>
           </div>
           
           <div className="flex flex-col md:flex-row gap-4 mt-6">
             <div className="flex-1 p-4 bg-neutral-50 dark:bg-neutral-800 rounded-lg">
-              <h3 className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Investito</h3>
+              <h3 className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Investimento Totale</h3>
               <p className="text-xl font-bold mt-1">{formatCurrency(netWorthData.totalInvestedAmount)}</p>
             </div>
             <div className="flex-1 p-4 bg-neutral-50 dark:bg-neutral-800 rounded-lg">
@@ -237,7 +236,7 @@ export default function DashboardClient() {
               </p>
             </div>
             <div className="flex-1 p-4 bg-neutral-50 dark:bg-neutral-800 rounded-lg">
-              <h3 className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Conti Bancari</h3>
+              <h3 className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Liquidità</h3>
               <p className="text-xl font-bold mt-1">{formatCurrency(netWorthData.bankAccountsValue)}</p>
             </div>
           </div>
