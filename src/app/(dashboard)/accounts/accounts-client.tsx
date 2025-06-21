@@ -281,26 +281,5 @@ export function AccountsClient() {
   );
 }
 
-/**
- * Genera un colore per una categoria di asset
- * @param category - Nome della categoria
- * @returns Codice colore esadecimale
- */
-function getColorForCategory(category: string): string {
-  const colors: Record<string, string> = {
-    'Azioni': '#4f46e5',
-    'Obbligazioni': '#0891b2',
-    'ETF': '#7c3aed',
-    'Fondi': '#db2777',
-    'Criptovalute': '#f59e0b',
-    'Materie Prime': '#84cc16',
-    'Immobili': '#14b8a6',
-    'Liquidità': '#64748b',
-    'Altro': '#6b7280'
-  };
-
-  return colors[category] || colors['Altro'];
-}
-
 // Esportazione default per l'importazione dinamica
 export default AccountsClient;

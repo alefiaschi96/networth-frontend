@@ -85,7 +85,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     checkAuth();
-  }, [router]);
+  }, [router, handleLogout]);
 
   /**
    * Recupera i dati dell'utente dal server
