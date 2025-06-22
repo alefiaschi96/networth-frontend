@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   // Ottimizzazione per la produzione
   output: 'standalone',
   
-  // Disabilita la generazione automatica della pagina 404 predefinita
-  // che può causare problemi con l'importazione di Html
+  // Disabilita completamente la generazione statica della pagina 404
+  // che causa problemi con l'importazione di Html
   experimental: {
     // Usa le nostre pagine personalizzate not-found.tsx e error.tsx
     typedRoutes: true,
@@ -22,6 +22,14 @@ const nextConfig: NextConfig = {
   typescript: {
     // Non fallire il build per errori TypeScript
     ignoreBuildErrors: true,
+  },
+  
+  // Disabilita completamente la generazione statica della pagina 404
+  exportPathMap: async function() {
+    return {
+      '/': { page: '/' },
+      // Non includere la pagina 404 nella generazione statica
+    };
   },
 };
 
