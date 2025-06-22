@@ -85,7 +85,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     checkAuth();
-  }, [router, handleLogout]);
+  }, [router]); // Rimosso handleLogout dalle dipendenze per evitare riferimenti circolari
 
   /**
    * Recupera i dati dell'utente dal server
