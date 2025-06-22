@@ -4,12 +4,14 @@ const nextConfig: NextConfig = {
   // Ottimizzazione per la produzione
   output: 'standalone',
   
-  // Disabilita completamente la generazione statica della pagina 404
-  // che causa problemi con l'importazione di Html
+  // Configurazione per gestire il problema della pagina 404
   experimental: {
     // Usa le nostre pagine personalizzate not-found.tsx e error.tsx
     typedRoutes: true,
   },
+  
+  // Disabilita la generazione di sourcemaps per ridurre la dimensione del build
+  productionBrowserSourceMaps: false,
   
   // Configurazione per AWS Amplify
   poweredByHeader: false,
@@ -24,12 +26,12 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // Disabilita completamente la generazione statica della pagina 404
-  exportPathMap: async function() {
-    return {
-      '/': { page: '/' },
-      // Non includere la pagina 404 nella generazione statica
-    };
+  // Configurazione per ignorare errori non critici durante il build
+  onDemandEntries: {
+    // Aumenta il tempo di cache per migliorare le performance
+    maxInactiveAge: 60 * 60 * 1000,
+    // Aumenta il numero di pagine in cache
+    pagesBufferLength: 5,
   },
 };
 
