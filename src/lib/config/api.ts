@@ -27,21 +27,21 @@ export const API_CONFIG = {
   BASE_URL: getBaseUrl(),
   ENDPOINTS: {
     AUTH: {
-      LOGIN: '/auth/login',
-      REGISTER: '/auth/register',
-      LOGOUT: '/auth/logout',
-      REFRESH_TOKEN: '/auth/refresh-token',
+      LOGIN: '/api/auth/login',
+      REGISTER: '/api/auth/register',
+      LOGOUT: '/api/auth/logout',
+      REFRESH_TOKEN: '/api/auth/refresh-token',
     },
     USER: {
-      PROFILE: '/auth/me',
+      PROFILE: '/api/auth/me',
     },
     ACCOUNTS: {
-      LIST: '/accounts',
-      DETAILS: (id: string) => `/accounts/${id}`,
+      LIST: '/api/accounts',
+      DETAILS: (id: string) => `/api/accounts/${id}`,
     },
     TRANSACTIONS: {
-      LIST: '/transactions',
-      DETAILS: (id: string) => `/transactions/${id}`,
+      LIST: '/api/transactions',
+      DETAILS: (id: string) => `/api/transactions/${id}`,
     },
   },
 };

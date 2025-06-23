@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Ottimizzazione per la produzione
-  output: 'standalone',
+  // Configurazione standard senza modalità standalone
   
   // Configurazione per gestire il problema della pagina 404
   experimental: {
