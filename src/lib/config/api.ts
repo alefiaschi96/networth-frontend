@@ -8,8 +8,6 @@
  * Determina l'URL base dell'API in base all'ambiente
  */
 const getBaseUrl = () => {
-  // Usa la variabile d'ambiente se disponibile (impostata da Amplify)
-  console.log('NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL); 
   if (process.env.NEXT_PUBLIC_API_URL) {
     return process.env.NEXT_PUBLIC_API_URL;
   }
